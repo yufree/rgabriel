@@ -3,12 +3,12 @@
 \alias{rgabriel}
 \docType{package}
 \title{
-Gabriel Multiple Comparison Test Adjusted for Unequal Variances and equal Sample Sizes
+Gabriel Multiple Comparison Test Adjusted for Unequal Variances and Unequal Sample Sizes
 }
 \description{
         This package was created to analyze multi-level one-way
         experimental designs. It is designed to handle vectorized
-        observation and factor data where there are equal sample
+        observation and factor data where there are unequal sample
         sizes and population variance homogeneity can not be assumed.
         To conduct the Gabriel test, create two vectors: one for your 
         observations and one for the factor level of each observation. 
@@ -20,13 +20,13 @@ Gabriel Multiple Comparison Test Adjusted for Unequal Variances and equal Sample
 \tabular{ll}{
 Package: \tab rgabriel\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
+Version: \tab 0.2\cr
 Date: \tab 2013-12-11\cr
 License: \tab GPL (>= 2)\cr
 }
         This package was created to analyze multi-level one-way
         experimental designs. It is designed to handle vectorized
-        observation and factor data where there are equal sample
+        observation and factor data where there are unequal sample
         sizes and population variance homogeneity can not be assumed.
         To conduct the Gabriel test, create two vectors: one for your 
         observations and one for the factor level of each observation. 
@@ -50,7 +50,12 @@ Gabriel, K.R., 1978. A Simple Method of Multiple Comparisons of Means. Journal o
 SNK
 }
 \examples{
+# equal numbers
 g <- c(1:50)
 f <- c(rep(1,10),rep(2,10),rep(3,10),rep(4,10),rep(5,10))
+gabriel.plot(g,f,rgabriel(g,f))
+# unequal numbers
+g <- c(1:40)
+f <- c(rep(1,3),rep(2,12),rep(3,15),rep(4,5),rep(5,5))
 gabriel.plot(g,f,rgabriel(g,f))
 }
