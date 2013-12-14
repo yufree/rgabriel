@@ -1,9 +1,7 @@
 gabriel.plot <- function(x, f, upper, lower=upper, length=0.1,...){
   if (class(f) != "factor") {
     f  <-  factor(f)
-  }
-  Level.Name  <-  levels(f)
-  k  <-  length(Level.Name)
+  }  
   input  <-  cbind(f[!sapply(is.na(x), all)], x[!sapply(is.na(x), all)])
   input  <-  input[order(input[, 1]), ]
   f  <-  factor(input[, 1])

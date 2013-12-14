@@ -1,9 +1,8 @@
 Package: rgabriel
 Type: Package
-Title: Gabriel Multiple Comparison Test Adjusted for Unequal Variances 
-       and Unequal Sample Sizes
-Version: 0.2
-Date: 2013-12-11
+Title: Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
+Version: 0.3
+Date: 2013-12-14
 Author: Miao YU
 Maintainer: Miao YU <yufreecas@gmail.com>
 Description: This package was created to analyze multi-level one-way

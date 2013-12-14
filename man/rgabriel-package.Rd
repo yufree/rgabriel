@@ -1,9 +1,9 @@
-\name{rgabriel-package}
-\alias{rgabriel-package}
+\name{rgabriel}
+\alias{rgabriel}
 \alias{rgabriel}
 \docType{package}
 \title{
-Gabriel Multiple Comparison Test Adjusted for Unequal Variances and Unequal Sample Sizes
+Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
 }
 \description{
         This package was created to analyze multi-level one-way
@@ -20,19 +20,25 @@ Gabriel Multiple Comparison Test Adjusted for Unequal Variances and Unequal Samp
 \tabular{ll}{
 Package: \tab rgabriel\cr
 Type: \tab Package\cr
-Version: \tab 0.2\cr
-Date: \tab 2013-12-11\cr
+Version: \tab 0.3\cr
+Date: \tab 2013-12-14\cr
 License: \tab GPL (>= 2)\cr
 }
-        This package was created to analyze multi-level one-way
-        experimental designs. It is designed to handle vectorized
-        observation and factor data where there are unequal sample
-        sizes and population variance homogeneity can not be assumed.
-        To conduct the Gabriel test, create two vectors: one for your 
-        observations and one for the factor level of each observation. 
+        
+        To conduct the Gabriel multiple comparison test, create two vectors: 
+        one for your observations and one for the factor level of each observation. 
         The function, rgabriel, conduct the test and save the output as
         a vector to input into the gabriel.plot function, which produces 
 	      a confidence interval plot for Multiple Comparison. 
+        The function smmcrit could show the Studentized Maximum Modulus at alpha = 0.05 
+        when the variate of SMM is less than 8 and smmcrit01 could show the 
+        Studentized Maximum Modulus at alpha = 0.05 when the variate of SMM is less than 8
+        They were got from a table from wilcox20.R from 
+        http://dornsife.usc.edu/assets/sites/239/docs/Rallfun-v20 and included in the
+        function rgabriel.
+        Also the gabriel.plot could be used to plot an error bar on the barplot
+        as long as you create the upper and lower confidence interval of you error bar.
+        
 }
 \author{
 Miao YU
