@@ -26,6 +26,9 @@ the upper margin of error bar
   \item{length}{
 the length of error bar
 }
+  \item{...}{
+Arguments to be passed to methods, such as graphical parameters. 
+}
 }
 
 \references{

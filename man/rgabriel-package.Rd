@@ -1,6 +1,5 @@
 \name{rgabriel-package}
 \alias{rgabriel-package}
-\alias{rgabriel}
 \docType{package}
 \title{
 Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
