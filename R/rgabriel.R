@@ -26,11 +26,12 @@ rgabriel <- function (x, f, a = "alpha level")
     df[i]  <-  n[i] - 1
   }
   s <- tapply(x,f,sd)
-  if(length(unique(n))==1) {
-  SR  <-  qtukey(p = a, nmeans = k, df = df, lower.tail = FALSE)
-  vstar  <-  SR*s/(2*sqrt(n))
-  return(vstar)
-  } else if(a == 0.05){
+#  if(length(unique(n))==1) {
+#  SR  <-  qtukey(p = a, nmeans = k, df = df, lower.tail = FALSE)
+#  vstar  <-  SR*s/(2*sqrt(n))
+#  return(vstar)
+#  } else if(a == 0.05){
+  if(a == 0.05){
     kstar <- choose(k,2)
     dfstar <- sum(df)
     smmcrit<-function(nuhat,C){

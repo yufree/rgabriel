@@ -1,8 +1,8 @@
 Package: rgabriel
 Type: Package
 Title: Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
-Version: 0.3
-Date: 2013-12-14
+Version: 0.4
+Date: 2013-12-15
 Author: Miao YU
 Maintainer: Miao YU <yufreecas@gmail.com>
 Description: This package was created to analyze multi-level one-way
@@ -14,4 +14,5 @@ Description: This package was created to analyze multi-level one-way
         The function, rgabriel, conduct the test and save the output as
         a vector to input into the gabriel.plot function, which produces 
         a confidence interval plot for Multiple Comparison.
+URL: https://github.com/yufree/rgabriel
 License: GPL (>= 2)
