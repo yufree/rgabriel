@@ -2,7 +2,7 @@
 ###Function for performing the procedure described in Gabriel's 1978 paper
 ###13 Dec 2013
 
-rgabriel <- function (x = "data vector", f = "factor vector", a = "alpha level") 
+rgabriel <- function (x, f, a = "alpha level") 
 {
   if (a == "alpha level") {
     a  <-  0.05
@@ -13,7 +13,6 @@ rgabriel <- function (x = "data vector", f = "factor vector", a = "alpha level")
   Level.Name  <-  levels(f)
   k  <-  length(Level.Name)
   input  <-  cbind(f[!sapply(is.na(x), all)], x[!sapply(is.na(x), all)])
-  input  <-  input[order(input[, 1]), ]
   f  <-  factor(input[, 1])
   x  <-  input[, 2]
   n  <-  numeric(length  <-  nlevels(f))
