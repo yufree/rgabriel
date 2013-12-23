@@ -11,8 +11,8 @@ Functions for conducting and plotting Gabriel's (1978) multiple comparison test 
 \tabular{ll}{
 Package: \tab rgabriel\cr
 Type: \tab Package\cr
-Version: \tab 0.4\cr
-Date: \tab 2013-12-15\cr
+Version: \tab 0.5\cr
+Date: \tab 2013-12-23\cr
 License: \tab GPL (>= 2)\cr
 }
 This package was created to analyze multi-level one-way experimental designs. It is designed to handle vectorized observation and factor data where there are unequal sample sizes and population variance homogeneity can not be assumed.To conduct the Gabriel test, create two vectors: one for your observations and one for the factor level of each observation. The function, rgabriel, conduct the test and save the output as a vector to input into the gabriel.plot function, which produces a confidence interval plot for Multiple Comparison.  
@@ -24,7 +24,8 @@ Maintainer: Miao YU <yufreecas@gmail.com>
 
 }
 \note{
-I would like to acknowledge the invaluable help of the author of http://www.gmw.rug.nl/~boomsma/apstatdata/wilcox20.R who show a table of studentized maximum modulus's distribution.
+I would like to acknowledge the invaluable help of the author of http://www.gmw.rug.nl/~boomsma/apstatdata/wilcox20.R who show a table of studentized maximum modulus's distribution and Yihui XIE's help on the simulation of studentized maximum modulus's distribution from cos.name/cn.
+
 }
   
 \references{

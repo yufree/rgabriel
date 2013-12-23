@@ -17,7 +17,7 @@ data vector
 factor vector
 }
   \item{a}{
-alpha level of mutiple comparison. Only alpha = 0.01 or 0.05 could be used as alpha level.
+alpha level of mutiple comparison. 
 }
 }
 \details{

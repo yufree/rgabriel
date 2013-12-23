@@ -1,8 +1,8 @@
 Package: rgabriel
 Type: Package
 Title: Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
-Version: 0.4
-Date: 2013-12-15
+Version: 0.5
+Date: 2013-12-23
 Author: Miao YU
 Maintainer: Miao YU <yufreecas@gmail.com>
 Description: This package was created to analyze multi-level one-way

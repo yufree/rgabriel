@@ -26,14 +26,14 @@ rgabriel <- function (x, f, a = "alpha level")
     df[i]  <-  n[i] - 1
   }
   s <- tapply(x,f,sd)
+  kstar <- choose(k,2)
+  dfstar <- sum(df)
 #  if(length(unique(n))==1) {
 #  SR  <-  qtukey(p = a, nmeans = k, df = df, lower.tail = FALSE)
 #  vstar  <-  SR*s/(2*sqrt(n))
 #  return(vstar)
 #  } else if(a == 0.05){
-  if(a == 0.05){
-    kstar <- choose(k,2)
-    dfstar <- sum(df)
+  if(a == 0.05 & kstar < 29 & dfstar < 201){
     smmcrit<-function(nuhat,C){
       #
       #  Determine the .95 quantile of the C-variate Studentized maximum
@@ -134,9 +134,7 @@ rgabriel <- function (x, f, a = "alpha level")
     SR <- smmcrit(dfstar,kstar)
     vstar <- SR*s/sqrt(2*n)
     return(vstar)
-  } else if(a == 0.01){
-    kstar <- choose(k,2)
-    dfstar <- sum(df)
+  } else if(a == 0.01 & kstar < 29 & dfstar < 201){
     smmcrit01<-function(nuhat,C){
       #
       #  Determine the .99 quantile of the C-variate Studentized maximum
@@ -211,7 +209,7 @@ rgabriel <- function (x, f, a = "alpha level")
                    3.49,3.51,3.54,3.56,3.59,3.61,3.63,3.64,3.66,
                    3.68,3.69,3.71,3.72,3.73,3.75,3.76,3.77,3.78)
         m1[20,]<-c(2.81,2.93,3.02,3.09,3.14,3.19,3.23,3.26,3.29,
-                   3.32,3.34,3.36,3.38,3.40,.42,.44,3.45,3.47,
+                   3.32,3.34,3.36,3.38,3.40,3.42,3.44,3.45,3.47,
                    3.48,3.49,3.50,3.52,3.53,3.54,3.55,3.56,3.57)
         if(nuhat>=200)smmcrit01<-m1[20,C]
         if(nuhat<200){
@@ -238,6 +236,17 @@ rgabriel <- function (x, f, a = "alpha level")
     vstar <- SR*s/sqrt(2*n)
     return(vstar)
   } else{
-    print('Sorry, I can not figure it out')
+    # thanks a lot for Yihui's help on the distribution of SMM
+    kstar <- choose(k,2)
+    dfstar <- sum(df)
+    # get a radom number from SMM
+    smm_one = function(m,df) max(abs(rt(m,df)))
+    # get n radom numbers from SMM
+    rsmm = function(n, m, df) replicate(n, smm_one(m, df))
+    # get the quantile of SMM distribution
+    qsmm = function(q, n = 10000, m, df) quantile(rsmm(n, m, df), q)
+    SR <- qsmm(1-a/2,n=10000, kstar, dfstar)
+    vstar <- SR*s/sqrt(2*n)
+    return(vstar)
   }
 }
