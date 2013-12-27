@@ -32,6 +32,8 @@ Gabriel, K.R., 1978. A Simple Method of Multiple Comparisons of Means. Journal o
 http://www.gmw.rug.nl/~boomsma/apstatdata/wilcox20.R
 }
 \author{
+Yihui XIE
+
 Miao YU
 }
 

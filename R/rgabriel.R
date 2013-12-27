@@ -1,6 +1,6 @@
 ###rgabriel
 ###Function for performing the procedure described in Gabriel's 1978 paper
-###13 Dec 2013
+###27 Dec 2013
 
 rgabriel <- function (x, f, a = "alpha level") 
 {
