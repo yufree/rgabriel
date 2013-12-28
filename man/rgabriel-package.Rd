@@ -23,8 +23,6 @@ Yihui XIE <\url{http://yihui.name}>
 
 Miao YU, PhD student in Research Center for Eco-Environmental Sciences(RCEES), Chinese Academy of Sciences
 
-Maintainer: Yihui XIE<xie@yihui.name> , Miao YU <yufreecas@gmail.com>
-
 }
 \note{
 More details on the simulation of studentized maximum modulus's distribution from http://cos.name/cn/topic/142002. 
