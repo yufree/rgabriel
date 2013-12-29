@@ -1,7 +1,5 @@
 gabriel.plot <- function(x, f, upper, lower=upper, length=0.1,...){
-  if (class(f) != "factor") {
-    f  <-  factor(f)
-  }  
+  f  <- as.factor(f)
   input  <-  cbind(f[!sapply(is.na(x), all)], x[!sapply(is.na(x), all)])
   f  <-  factor(input[, 1])
   x  <-  input[, 2]
