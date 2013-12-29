@@ -7,7 +7,7 @@ the length of bar for Gabriel's barplot
 Show the upper or lower confidence interval of Gabriel's barplot.
 }
 \usage{
-rgabriel(x, f, a = "alpha level")
+rgabriel(x, f, a = 0.05)
 }
 \arguments{
   \item{x}{

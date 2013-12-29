@@ -2,11 +2,8 @@
 ###Function for performing the procedure described in Gabriel's 1978 paper
 ###28 Dec 2013
 
-rgabriel <- function (x, f, a = "alpha level") 
+rgabriel <- function (x, f, a = 0.05)
 {
-  if (a == "alpha level") {
-    a  <-  0.05
-  }
   if (class(f) != "factor") {
     f  <-  factor(f)
   }
