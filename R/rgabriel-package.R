@@ -1,0 +1,52 @@
+
+
+#' Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
+#' 
+#' Functions for conducting and plotting Gabriel's (1978) multiple comparison
+#' test accounting for unequal variance and unequal sample sizes.
+#' 
+#' This package
+#' was created to analyze multi-level one-way experimental designs. It is
+#' designed to handle vectorized observation and factor data where there are
+#' unequal sample sizes and population variance homogeneity can not be
+#' assumed.To conduct the Gabriel test, create two vectors: one for your
+#' observations and one for the factor level of each observation. The function,
+#' rgabriel, conduct the test and save the output as a vector to input into the
+#' gabriel.plot function, which produces a confidence interval plot for
+#' Multiple Comparison.
+#' 
+#' @name rgabriel-package
+#' @docType package
+#' @note More details on the simulation of studentized maximum modulus's
+#' distribution from http://cos.name/cn/topic/142002.
+#' @author
+#' Yihui XIE <\url{http://yihui.name}>
+#' Miao YU <\url{https://yufree.cn}>
+#' @seealso \code{\link{rgabriel}}, \code{\link{gabriel.plot}}
+#' @references Gabriel, K.R., 1978. A Simple Method of Multiple Comparisons of
+#' Means. Journal of the American Statistical Association 73, 724.
+#' 
+#' Stoline, M.R., Ury, H.K., 1979. Tables of the Studentized Maximum Modulus
+#' Distribution and an Application to Multiple Comparisons among Means.
+#' Technometrics 21, 87.
+#' @keywords package, plot, Gabriel
+#' @examples
+#' 
+#' 
+#' # equal numbers
+#' 
+#' g <- c(1:50)
+#' f <- c(rep(1,10),rep(2,10),rep(3,10),rep(4,10),rep(5,10))
+#' gabriel.plot(g,f,rgabriel(g,f))
+#' 
+#' # unequal numbers
+#' 
+#' g <- c(1:40)
+#' f <- c(rep(1,3),rep(2,12),rep(3,15),rep(4,5),rep(5,5))
+#' gabriel.plot(g,f,rgabriel(g,f))
+#' 
+#' 
+NULL
+
+
+

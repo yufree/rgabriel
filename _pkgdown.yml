@@ -1,0 +1,6 @@
+url: http://yufree.github.io/rgabriel/
+template:
+  bootstrap: 5
+  params:
+    ganalytics: UA-58201304-1
+    bootswatch: journal
