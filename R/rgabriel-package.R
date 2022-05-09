@@ -1,5 +1,3 @@
-
-
 #' Gabriel Multiple Comparison Test and Plot the Confidence Interval on Barplot
 #' 
 #' Functions for conducting and plotting Gabriel's (1978) multiple comparison
@@ -20,8 +18,8 @@
 #' @note More details on the simulation of studentized maximum modulus's
 #' distribution from http://cos.name/cn/topic/142002.
 #' @author
-#' Yihui XIE <\url{http://yihui.name}>
-#' Miao YU <\url{https://yufree.cn}>
+#' Yihui XIE <\url{https://yihui.org/}>
+#' Miao YU <\url{https://yufree.cn/}>
 #' @seealso \code{\link{rgabriel}}, \code{\link{gabriel.plot}}
 #' @references Gabriel, K.R., 1978. A Simple Method of Multiple Comparisons of
 #' Means. Journal of the American Statistical Association 73, 724.
@@ -29,7 +27,7 @@
 #' Stoline, M.R., Ury, H.K., 1979. Tables of the Studentized Maximum Modulus
 #' Distribution and an Application to Multiple Comparisons among Means.
 #' Technometrics 21, 87.
-#' @keywords package, plot, Gabriel
+#' @keywords Gabriel
 #' @examples
 #' 
 #' 

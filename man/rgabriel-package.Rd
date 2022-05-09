@@ -52,9 +52,7 @@ Technometrics 21, 87.
 \code{\link{rgabriel}}, \code{\link{gabriel.plot}}
 }
 \author{
-Yihui XIE <\url{http://yihui.name}>
-Miao YU <\url{https://yufree.cn}>
+Yihui XIE <\url{https://yihui.org/}>
+Miao YU <\url{https://yufree.cn/}>
 }
 \keyword{Gabriel}
-\keyword{package,}
-\keyword{plot,}
